@@ -1,12 +1,12 @@
 /* All words on the site live here, in English (en) and German (de).
    Edit freely. Each sound's id must match an entry in audio-data.js.
-   palette: four colours from darkest to lightest, used for the icon and
-   the window background. */
+   text: the description shown in a sound's window. Without a German (de)
+   version, German visitors see the English one.
+   draft: a suggested description that is not shown; rename it to text to use it.
+   palette: four colours from darkest to lightest, used for the window
+   background and for the file's waveform while it plays. */
 
 window.ESF_CONTENT = {
-  /* Set to true to show each sound's description text in its window again. */
-  showDescriptions: false,
-
   ui: {
     en: {
       performance: "the performance",
@@ -53,7 +53,7 @@ window.ESF_CONTENT = {
       title: { en: "Present", de: "Gegenwart" },
       subtitle: { en: "Neutral", de: "Neutral" },
       eyebrow: { en: "sound world 01", de: "Klangwelt 01" },
-      text: {
+      draft: {
         en: "The present, held neutral. A calm, light ambience of bowed, violin-like tones, with slow movement and a trace of air and rosin. The five futures branch off from here.",
         de: "Die Gegenwart, neutral gehalten. Eine ruhige, helle Fläche aus gestrichenen, geigenähnlichen Tönen, mit langsamer Bewegung und einem Hauch von Luft und Kolophonium. Von hier zweigen die fünf Zukünfte ab."
       },
@@ -66,7 +66,7 @@ window.ESF_CONTENT = {
       title: { en: "Moss", de: "Moos" },
       subtitle: { en: "The return to nature", de: "Die Rückkehr zur Natur" },
       eyebrow: { en: "sound world 02", de: "Klangwelt 02" },
-      text: {
+      draft: {
         en: "People look for new ways to live in tune with nature. A slow sine-wave chord with soft upper partials and a faint pulse. Over the cycle it grows brighter, more textured and more strongly pulsed.",
         de: "Die Menschen suchen nach neuen Wegen, im Einklang mit der Natur zu leben. Ein langsamer Sinus-Akkord mit weichen Obertönen und einem leisen Puls. Im Lauf des Zyklus wird er heller, dichter und deutlicher pulsierend."
       },
@@ -79,7 +79,7 @@ window.ESF_CONTENT = {
       title: { en: "Stone", de: "Stein" },
       subtitle: { en: "The empty city", de: "Die leere Stadt" },
       eyebrow: { en: "sound world 03", de: "Klangwelt 03" },
-      text: {
+      draft: {
         en: "More and more people move to the big cities, and smaller towns are slowly left behind. Hollow stone resonance, wind, distant footsteps and long echoes through empty streets.",
         de: "Immer mehr Menschen ziehen in die Großstädte, kleinere Orte werden nach und nach verlassen. Hohle Steinresonanz, Wind, ferne Schritte und lange Echos in leeren Straßen."
       },
@@ -92,7 +92,7 @@ window.ESF_CONTENT = {
       title: { en: "Iron stone", de: "Eisenstein" },
       subtitle: { en: "The industrial takeover", de: "Die industrielle Übernahme" },
       eyebrow: { en: "sound world 04", de: "Klangwelt 04" },
-      text: {
+      draft: {
         en: "As the iron mine keeps expanding, people leave their homes and industry pushes out the life that was there. Underground rumble, moving air and metallic impacts, joined by cavern reflections as the cycle develops.",
         de: "Während sich das Eisenbergwerk immer weiter ausdehnt, verlassen die Menschen ihre Heimat, und die Industrie verdrängt das bisherige Leben. Unterirdisches Grollen, bewegte Luft und metallische Schläge, zu denen im Lauf des Zyklus der Hall einer Kaverne kommt."
       },
@@ -105,7 +105,7 @@ window.ESF_CONTENT = {
       title: { en: "Metal", de: "Metall" },
       subtitle: { en: "The AI future", de: "Die KI-Zukunft" },
       eyebrow: { en: "sound world 05", de: "Klangwelt 05" },
-      text: {
+      draft: {
         en: "Artificial intelligence reaches the countryside, and digital technology becomes part of everyday life. A 165 Hz tone, frequency-modulated and cut by an exact 4 Hz gate, steps through an E–G–B arpeggio over a calm, breathing field. Its glitches follow a fixed score, 20260814.",
         de: "Künstliche Intelligenz erreicht auch den ländlichen Raum, digitale Technologien werden Teil des Alltags. Ein 165-Hz-Ton, frequenzmoduliert und von einem exakten 4-Hz-Gate zerschnitten, schreitet über einer ruhig atmenden Fläche ein E-G-H-Arpeggio ab. Seine Störungen folgen einer festen Partitur, 20260814."
       },
@@ -118,7 +118,7 @@ window.ESF_CONTENT = {
       title: { en: "Threads", de: "Fäden" },
       subtitle: { en: "Community development", de: "Gemeinschaftliche Entwicklung" },
       eyebrow: { en: "sound world 06", de: "Klangwelt 06" },
-      text: {
+      draft: {
         en: "People join forces, share what they know and shape their future together. Warm threads of sound weave around a shared pitch and a shared pulse and gather into a wider common field.",
         de: "Die Menschen schließen sich zusammen, teilen ihr Wissen und gestalten gemeinsam ihre Zukunft. Warme Klangfäden verweben sich um eine gemeinsame Tonhöhe und einen gemeinsamen Puls und sammeln sich zu einem weiten, gemeinsamen Feld."
       },
@@ -132,8 +132,7 @@ window.ESF_CONTENT = {
       title: { en: "Distortion morse", de: "Distortion morse" },
       eyebrow: { en: "eisenerz · august 2026", de: "Eisenerz · August 2026" },
       text: {
-        en: "A saturated signal that keeps breaking off and starting again, like Morse code sent down an overdriven line.",
-        de: "Ein gesättigtes Signal, das immer wieder abreißt und neu einsetzt, wie Morsezeichen in einer übersteuerten Leitung."
+        en: "Among fuzzy, reverberating noise we find morse code. “-.. . .- - ....”, or “D-E-A-T-H”\nYet this death contorts, reshapes, grows nebulous and spiked. It is one step away from rebirth."
       },
       meta: { en: "44.1 kHz · 24 bit · stereo", de: "44,1 kHz · 24 Bit · Stereo" },
       palette: ["#180807", "#5c1510", "#c23a26", "#f4a184"]
@@ -143,8 +142,7 @@ window.ESF_CONTENT = {
       title: { en: "Synth 1", de: "Synth 1" },
       eyebrow: { en: "eisenerz · august 2026", de: "Eisenerz · August 2026" },
       text: {
-        en: "A short, dense synth loop. A low drone pulses steadily under a bright band of overtones.",
-        de: "Eine kurze, dichte Synthesizer-Schleife. Ein tiefer Bordun pulsiert gleichmäßig unter einem hellen Band von Obertönen."
+        en: "Piano keys and violin strings float in reverse across a rain-soaked terrain. Nothing sticks: instead the sound glides. Light and nimble."
       },
       meta: { en: "44.1 kHz · 24 bit · stereo", de: "44,1 kHz · 24 Bit · Stereo" },
       palette: ["#1d1409", "#6d4a1d", "#d19b4b", "#f6deb0"]
@@ -154,8 +152,7 @@ window.ESF_CONTENT = {
       title: { en: "Synth 2", de: "Synth 2" },
       eyebrow: { en: "eisenerz · august 2026", de: "Eisenerz · August 2026" },
       text: {
-        en: "Three movements in a minute. Low pulses open it, a thick sustained drone takes over, and the pulse returns, sharper and more regular.",
-        de: "Drei Bewegungen in einer Minute. Tiefe Pulse eröffnen, ein dichter, gehaltener Bordun übernimmt, dann kehrt der Puls zurück, schärfer und gleichmäßiger."
+        en: "A cold but merry rhythm. Snow. Flute notes. There may be Christmas bells, in time. But nothing stays forever."
       },
       meta: { en: "44.1 kHz · 24 bit · stereo", de: "44,1 kHz · 24 Bit · Stereo" },
       palette: ["#0b1a1c", "#255a5c", "#79b1a7", "#d8efe7"]
@@ -165,8 +162,7 @@ window.ESF_CONTENT = {
       title: { en: "Synth 3", de: "Synth 3" },
       eyebrow: { en: "eisenerz · august 2026", de: "Eisenerz · August 2026" },
       text: {
-        en: "The longest piece in the archive. It begins sparse and high, opens into a full stepping sequence after a minute, drops its low end for a while and slowly gathers again.",
-        de: "Das längste Stück im Archiv. Es beginnt karg und hoch, öffnet sich nach einer Minute zu einer vollen, schreitenden Sequenz, verliert eine Weile seine Tiefen und sammelt sich langsam wieder."
+        en: "Morphing, echoing, reversing. Then: a blooming sound. Growing bigger. “synth 3” is proud, but young. Something new is coming, but it has yet to take full shape."
       },
       meta: { en: "44.1 kHz · 24 bit · stereo", de: "44,1 kHz · 24 Bit · Stereo" },
       palette: ["#100e24", "#352d68", "#8676c0", "#e0d9f4"]
@@ -176,8 +172,7 @@ window.ESF_CONTENT = {
       title: { en: "Synth 4", de: "Synth 4" },
       eyebrow: { en: "eisenerz · august 2026", de: "Eisenerz · August 2026" },
       text: {
-        en: "A monolithic drone. Four minutes of dense, steady harmonics that only thin out at the very end.",
-        de: "Ein monolithischer Bordun. Vier Minuten dichter, gleichbleibender Obertöne, die sich erst ganz am Ende lichten."
+        en: "Storming. An echo eats away at an echo. The mountain speaks to the river and the river speaks back to the mountain. Beneath the cobblestone, inside the caves. Grand, grand, grand echo. An echo as an answer to a call. Then the echo answers the echo. On and on, the keyboard sounds."
       },
       meta: { en: "44.1 kHz · 24 bit · stereo", de: "44,1 kHz · 24 Bit · Stereo" },
       palette: ["#17170f", "#4b4b33", "#a3a175", "#ebe9cf"]
@@ -187,8 +182,7 @@ window.ESF_CONTENT = {
       title: { en: "Synth guitar", de: "Synth guitar" },
       eyebrow: { en: "eisenerz · august 2026", de: "Eisenerz · August 2026" },
       text: {
-        en: "A guitar sent through synthesizers. Strummed swells over a heavy low end, with a shimmer of overtones above.",
-        de: "Eine Gitarre, durch Synthesizer geschickt. Angeschlagene Wellen über einem schweren Fundament, darüber ein Schimmer von Obertönen."
+        en: "Nightfall. Little feet pitter-patter across guitar notes. Mice, bugs, cats, birds. There will always be children. The guitar waits for morning."
       },
       meta: { en: "44.1 kHz · 24 bit · stereo", de: "44,1 kHz · 24 Bit · Stereo" },
       palette: ["#1c1016", "#5e3550", "#b77a9e", "#f0d6e4"]
@@ -198,8 +192,7 @@ window.ESF_CONTENT = {
       title: { en: "Violin looped", de: "Violin looped" },
       eyebrow: { en: "eisenerz · august 2026", de: "Eisenerz · August 2026" },
       text: {
-        en: "A violin phrase layered over itself until it turns into a slow, circling chorus.",
-        de: "Eine Geigenphrase, so oft über sich selbst geschichtet, bis daraus ein langsam kreisender Chor wird."
+        en: "A fiddle folk tune, misremembered. A distant memory of playing a violin piece, suddenly falling apart. Diluting like water colour on wet paper. A string vibrates and fills the entire town in bright sound. The streets are warm. They are not empty."
       },
       meta: { en: "44.1 kHz · 24 bit · stereo", de: "44,1 kHz · 24 Bit · Stereo" },
       palette: ["#22150b", "#76502b", "#d0a066", "#f6e4c6"]
@@ -209,8 +202,7 @@ window.ESF_CONTENT = {
       title: { en: "Whale guitar train", de: "Whale guitar train" },
       eyebrow: { en: "eisenerz · august 2026", de: "Eisenerz · August 2026" },
       text: {
-        en: "Fourteen seconds of guitar that sounds like whale song and a passing train at once.",
-        de: "Vierzehn Sekunden Gitarre, die zugleich nach Walgesang und nach einem vorbeifahrenden Zug klingt."
+        en: "In years upon years upon years the water levels have risen. A flood – deluge. A mother whale and her calf travel around the mountain top sticking above ocean level like a glorious island. Underwater, a train travels. The whale will tell her story."
       },
       meta: { en: "44.1 kHz · 24 bit · stereo", de: "44,1 kHz · 24 Bit · Stereo" },
       palette: ["#07131e", "#1b4562", "#6a9cc0", "#d3e6f2"]

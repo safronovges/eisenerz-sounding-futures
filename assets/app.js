@@ -725,8 +725,11 @@
     w.title.textContent = tr(t.title);
     w.subtitle.textContent = tr(t.subtitle);
     w.subtitle.hidden = !tr(t.subtitle);
+    // A description shows wherever one exists; without German, the English original is used.
     w.text.textContent = tr(t.text);
-    w.text.hidden = !C.showDescriptions || !tr(t.text);
+    w.text.hidden = !w.text.textContent;
+    if (w.text.textContent && lang !== "en" && !(t.text && t.text[lang])) w.text.lang = "en";
+    else w.text.removeAttribute("lang");
     w.meta.textContent = tr(t.meta);
     w.loopButton.textContent = ui("loop");
     w.wave.setAttribute("aria-label", ui("position"));
