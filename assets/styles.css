@@ -143,6 +143,24 @@ button {
   opacity: .05;
 }
 
+/* the logo drawing itself on arrival, then fading into the field */
+.field__intro {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 88vmin;
+  translate: -50% -50%;
+  overflow: visible;
+}
+
+.field__intro .logo__ink {
+  fill: rgba(236, 239, 230, .78);
+}
+
+.field__intro .logo__beige {
+  fill: rgba(200, 180, 164, .72);
+}
+
 @keyframes breathe {
   from { transform: scale(1); }
   to { transform: scale(1.06); }
@@ -911,6 +929,27 @@ button {
   padding: 24px 28px 30px;
 }
 
+/* the logo as the cover of the background window, light on the dark glass */
+.doc__cover {
+  margin: 4px 0 10px;
+}
+
+.doc__logo {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.doc__logo .logo__ink,
+.doc__logo .logo__word {
+  fill: var(--ink);
+}
+
+.doc__logo .logo__beige {
+  fill: #b9a597;
+}
+
 .doc__title {
   margin: 0 0 4px;
   font-family: var(--display);
@@ -1047,7 +1086,8 @@ button {
   }
 
   .field__glow,
-  .field__tint {
+  .field__tint,
+  .field__intro {
     top: 78%;
   }
 

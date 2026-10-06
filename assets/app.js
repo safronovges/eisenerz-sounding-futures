@@ -886,6 +886,7 @@
     const textLang = page.blocks[lang] ? lang : "en";
     if (textLang !== lang) art.lang = textLang;
     else art.removeAttribute("lang");
+    if (w.id === "background" && LOGO) art.append(docCover());
     art.append(h("h2", { class: "doc__title", id: `w-${w.id}-title` }, page.title[textLang] ?? tr(page.title)));
     for (const block of page.blocks[textLang]) {
       if (typeof block === "string") art.append(h("p", {}, block));
@@ -971,6 +972,120 @@
     if (pulsingIcon && pulsingIcon !== icon) pulsingIcon.style.removeProperty("--lvl");
     if (icon) icon.style.setProperty("--lvl", level.toFixed(3));
     pulsingIcon = icon;
+  }
+
+  /* ---------- the logo ---------- */
+
+  // The project's logo: the topographic lines of Eisenerz, traced from the
+  // team's drawing into logo-data.js. Each layer is defined once and reused
+  // by the intro and by the cover of the background window.
+  const LOGO = window.ESF_LOGO;
+
+  function svgEl(tag, attrs) {
+    const el = document.createElementNS(SVGNS, tag);
+    for (const [key, value] of Object.entries(attrs || {})) el.setAttribute(key, value);
+    return el;
+  }
+
+  function logoDefs() {
+    const svg = svgEl("svg", { width: "0", height: "0", "aria-hidden": "true" });
+    svg.style.position = "absolute";
+    const defs = svgEl("defs");
+    for (const layer of ["ink", "beige", "word"]) {
+      defs.append(svgEl("path", { id: "esf-logo-" + layer, d: LOGO[layer], "fill-rule": "evenodd" }));
+    }
+    svg.append(defs);
+    document.body.prepend(svg);
+  }
+
+  function logoSvg(cls, box, layers) {
+    const svg = svgEl("svg", { class: cls, viewBox: box.join(" "), "aria-hidden": "true" });
+    for (const layer of layers) svg.append(svgEl("use", { href: "#esf-logo-" + layer, class: "logo__" + layer }));
+    return svg;
+  }
+
+  function docCover() {
+    const svg = logoSvg("doc__logo", LOGO.full, ["beige", "ink", "word"]);
+    svg.removeAttribute("aria-hidden");
+    svg.setAttribute("role", "img");
+    svg.setAttribute("aria-label", "Sounding Futures");
+    return h("figure", { class: "doc__cover" }, svg);
+  }
+
+  // On arrival the logo draws itself: every line from its top end, the way a
+  // pen would, in a wave that runs down the mountain. The bars cut in as the
+  // wave passes, then the drawing fades into the field.
+  const PEN = 560;    // drawing speed, logo pixels per second
+  const FRONT = 420;  // how fast the starting wave moves down
+
+  function playIntro() {
+    if (reducedMotion.matches || !field.animate) return;
+    const box = LOGO.box;
+    const rand = seeded("eisenerz");
+    const svg = logoSvg("field__intro", box, ["beige", "ink"]);
+    svg.style.aspectRatio = `${box[2]} / ${box[3]}`;
+    const defs = svgEl("defs");
+    let end = 0;
+
+    const mask = (id, layer) => {
+      const m = svgEl("mask", { id, maskUnits: "userSpaceOnUse", x: box[0], y: box[1], width: box[2], height: box[3] });
+      defs.append(m);
+      svg.querySelector(".logo__" + layer).setAttribute("mask", `url(#${id})`);
+      return m;
+    };
+
+    const draw = (m, strokes, lag) => {
+      for (const [width, length, top, , d] of strokes) {
+        const path = svgEl("path", {
+          d,
+          fill: "none",
+          stroke: "#fff",
+          "stroke-width": width,
+          "stroke-linecap": "round",
+          "stroke-linejoin": "round",
+          pathLength: "1",
+          "stroke-dasharray": "1 1"
+        });
+        m.append(path);
+        const delay = lag + ((top - box[1]) / FRONT) * 1000 + (rand() - 0.5) * 220;
+        const duration = Math.max(240, (length / PEN) * 1000);
+        end = Math.max(end, delay + duration);
+        path.animate([
+          { offset: 0, strokeDashoffset: 1, opacity: 0 },
+          { offset: 0.02, opacity: 1 },
+          { offset: 1, strokeDashoffset: 0, opacity: 1 }
+        ], { delay, duration, fill: "both", easing: "cubic-bezier(.3, .1, .45, 1)" });
+      }
+    };
+
+    const inkMask = mask("esf-draw-ink", "ink");
+    const beigeMask = mask("esf-draw-beige", "beige");
+    draw(inkMask, LOGO.inkStrokes, 0);
+    draw(beigeMask, LOGO.beigeStrokes, 380);
+
+    for (const [x, y, width, height] of LOGO.bars) {
+      const rect = svgEl("rect", { x, y, width, height, fill: "#fff" });
+      rect.style.transformBox = "fill-box";
+      rect.style.transformOrigin = "0 50%";
+      inkMask.append(rect);
+      const delay = ((y + height / 2 - box[1]) / FRONT) * 1000;
+      end = Math.max(end, delay + 520);
+      rect.animate([{ transform: "scaleX(0)" }, { transform: "scaleX(1)" }],
+        { delay, duration: 520, fill: "both", easing: "cubic-bezier(.6, 0, .2, 1)" });
+    }
+
+    // A last soft fill catches any edge the strokes did not quite cover.
+    for (const m of [inkMask, beigeMask]) {
+      const rect = svgEl("rect", { x: box[0], y: box[1], width: box[2], height: box[3], fill: "#fff" });
+      m.append(rect);
+      rect.animate([{ opacity: 0 }, { opacity: 1 }],
+        { delay: end - 250, duration: 650, fill: "both", easing: "ease-in-out" });
+    }
+
+    svg.prepend(defs);
+    field.insertBefore(svg, field.querySelector(".field__tint"));
+    svg.animate([{ opacity: 1 }, { opacity: 0 }],
+      { delay: end + 500, duration: 1800, fill: "forwards", easing: "ease-in-out" }).onfinish = () => svg.remove();
   }
 
   /* ---------- page chrome ---------- */
@@ -1131,6 +1246,10 @@
   /* ---------- start ---------- */
 
   makeGrain();
+  if (LOGO) {
+    logoDefs();
+    playIntro();
+  }
   renderFiles();
   applyLanguage();
   bind();

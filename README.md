@@ -29,6 +29,16 @@ Every text lives in `assets/content.js`, in English (`en`) and German (`de`):
 2. Run `python3 tools/build_audio.py <id>` (needs ffmpeg and numpy). It writes `audio/<id>.mp3` and adds its waveform data to `assets/audio-data.js`. Without an id it rebuilds every track.
 3. Add an entry with the same id to `tracks` in `assets/content.js` and add the id to `files`.
 
+## The logo
+
+The Sounding Futures logo (the topographic lines of Eisenerz) draws itself over the light when the page opens, then fades away. It also sits at the top of "the background" window. Both use `assets/logo-data.js`, which `tools/trace_logo.py` traces from `tools/logo.webp`. To use a new version of the drawing, replace that image, check the bar and wordmark positions at the top of the script, and run:
+
+```bash
+python3 tools/trace_logo.py
+```
+
+It needs `pip install numpy pillow scikit-image potracer`.
+
 ## Put it online
 
 The site is published with GitHub Pages from the `main` branch of this repository. Every push to `main` updates the live site within a minute or two:
