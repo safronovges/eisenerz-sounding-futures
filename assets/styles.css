@@ -405,8 +405,9 @@ button {
 /* footer */
 
 .foot {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-content: end;
   align-items: end;
   gap: 16px;
   font-family: var(--mono);
@@ -420,22 +421,17 @@ button {
   margin: 0;
 }
 
-.foot__end {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
+/* Looks like the note beside it; the padding only widens the tap area. */
 .foot__link {
   appearance: none;
   background: none;
   border: 0;
-  padding: 4px 0;
+  padding: 6px 8px;
+  margin: -6px -8px;
   cursor: pointer;
-  font-family: var(--mono);
-  font-size: var(--t-micro);
-  letter-spacing: .02em;
-  color: var(--ink-soft);
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
   transition: color .3s var(--ease);
 }
 
@@ -444,12 +440,8 @@ button {
   color: var(--ink);
 }
 
-.foot__link[aria-expanded="true"] {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
 .lang {
+  justify-self: end;
   display: flex;
   gap: 2px;
 }
@@ -1123,6 +1115,20 @@ button {
   .doc__credits div {
     grid-template-columns: 1fr;
     gap: 2px;
+  }
+}
+
+/* too narrow for three in a row: the impressum moves below, still centred */
+@media (max-width: 440px) {
+  .foot {
+    grid-template-columns: 1fr auto;
+    row-gap: 14px;
+  }
+
+  .foot__link {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: center;
   }
 }
 

@@ -44,8 +44,10 @@ It needs `pip install numpy pillow scikit-image potracer`.
 The site is published with GitHub Pages from the `main` branch of this repository. Every push to `main` updates the live site within a minute or two:
 
 ```bash
-git add -A && git commit -m "Update texts" && git push
+python3 tools/stamp.py && git add -A && git commit -m "Update texts" && git push
 ```
+
+`tools/stamp.py` puts a fingerprint of each script and stylesheet into the links in `index.html` (`assets/app.js?v=…`). GitHub Pages lets browsers keep files for ten minutes, so without it a reload right after an update can mix the new page with old scripts, and new buttons do nothing.
 
 If a push with new audio fails with "HTTP 400", git's upload buffer is too small for the MP3s. Push once with a bigger buffer:
 

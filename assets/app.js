@@ -524,8 +524,8 @@
       x = vw - r.width - 24;
       y = 58;
     } else if (w.id === "impressum") {
-      // Above its link in the footer.
-      x = vw - r.width - 24;
+      // Above its link in the middle of the footer.
+      x = (vw - r.width) / 2;
       y = vh - r.height - 52;
     } else {
       // Sound windows open over the light in the middle, so the files stay reachable.
