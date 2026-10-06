@@ -248,11 +248,9 @@ window.ESF_CONTENT = {
       title: { en: "The background", de: "Der Hintergrund" },
       blocks: {
         en: [
-          "Eisenerz means iron ore. The town lies in Upper Styria at the foot of the Erzberg, the largest open-pit ore mine in Central Europe and the world's largest siderite deposit. Iron has been mined here for about a thousand years, traditionally since 712. Today the mountain is cut into around 30 terraces, each about 24 metres high, and some three million tonnes of ore leave it every year.",
-          "The town grew with the mine and shrank as mining needed fewer hands. In 1951 Eisenerz had 12,948 inhabitants. In 2026 it has about 3,300, and many flats and shops in the old town stand empty. Since the mid-2000s the town has planned its own shrinking under the name redesign Eisenerz.",
-          "Rostfest grew out of that process in 2012. The festival opens empty buildings and public spaces to art, music and debate, and visitors can stay overnight in vacant flats.",
-          "In 2026 students of the Art x Science School for Transformation at the University of Applied Arts Vienna came to the festival with Karin Reisinger. Her research compares two mining towns, Eisenerz and Malmberget in Sweden, and looks at how extraction and care meet in their buildings and everyday life.",
-          "Sounding Futures started from one question: how might the futures of Eisenerz sound? The team imagined five of them and gave each its own sound world. The project's announcement promised visitors access to the recordings afterwards. This archive keeps that promise.",
+          "Being one of the main mediums of our perception of the world, sound is often completely overlooked as a part of our daily lives. Thinking about our future, we usually think about what it looks like, but never how it sounds.",
+          "During the “Sounding Futures” investigation, we challenged that perspective, speculating our own future envisioning and encouraging others to do the same: observe, imagine and wish for their futures in the form of sound.",
+          "As students from the Bachelor’s program “Transformation Studies. Art x Science”, we have been in touch with the town of Eisenerz ever since our first semester. As we have pondered the extractivist history of this place and its iron ore mining site, as well as the small yet lively community inhabiting it, our group has made an effort to apply our framework of thinking sounds on the field: imagine how different scenarios of the town development could affect its future sound. Would it be more industrial? Would it be calmer? Would it be structured or chaotic?",
           { futures: [
             ["stone", "The empty city"],
             ["metal", "The AI future"],
@@ -264,16 +262,13 @@ window.ESF_CONTENT = {
             ["Team", "Amelie Atsch, Lena Gramlinger, Sofía Gutiérrez Escobar, Diana Kho, Raphaela Leitner, Egor Safronov, Karin Reisinger"],
             ["Course", "Art x Science School for Transformation, University of Applied Arts Vienna"],
             ["Festival", "Rostfest 2026, Eisenerz", "https://www.rostfest.at"],
-            ["Reading", "Karin Reisinger, “Two Mining Areas: Spaces of Care amid Extraction”, Architecture and Culture 11 (3–4), 2023", "https://doi.org/10.1080/20507828.2023.2219115"],
-            ["Figures", "Statistik Austria (population), VA Erzberg (mine)"]
+            ["Reading", "Karin Reisinger, “Two Mining Areas: Spaces of Care amid Extraction”, Architecture and Culture 11 (3–4), 2023", "https://doi.org/10.1080/20507828.2023.2219115"]
           ] }
         ],
         de: [
-          "Eisenerz liegt in der Obersteiermark am Fuß des Erzbergs, des größten Erztagebaus Mitteleuropas und der größten Sideritlagerstätte der Welt. Seit rund tausend Jahren wird hier Erz abgebaut, der Überlieferung nach seit 712. Heute ist der Berg in etwa 30 Etagen von je rund 24 Metern Höhe gegliedert, und jedes Jahr verlassen ihn rund drei Millionen Tonnen Erz.",
-          "Die Stadt ist mit dem Bergbau gewachsen und geschrumpft, als er immer weniger Menschen brauchte. 1951 hatte Eisenerz 12.948 Einwohner:innen. 2026 sind es rund 3.300, und viele Wohnungen und Geschäfte in der Altstadt stehen leer. Seit Mitte der 2000er-Jahre plant die Stadt ihr Kleinerwerden unter dem Namen redesign Eisenerz.",
-          "Aus diesem Prozess ist 2012 das Rostfest entstanden. Das Festival öffnet leere Gebäude und öffentliche Räume für Kunst, Musik und Diskussion, und Besucher:innen können in leerstehenden Wohnungen übernachten.",
-          "2026 kamen Studierende der Art x Science School for Transformation der Universität für angewandte Kunst Wien mit Karin Reisinger zum Festival. Ihre Forschung vergleicht zwei Bergbauorte, Eisenerz und Malmberget in Schweden, und fragt, wie Rohstoffabbau und Sorgearbeit in ihren Gebäuden und im Alltag ineinandergreifen.",
-          "Sounding Futures ging von einer Frage aus: Wie könnten die Zukünfte von Eisenerz klingen? Das Team entwarf fünf davon und gab jeder eine eigene Klangwelt. Die Ankündigung des Projekts versprach den Besucher:innen, die Aufnahmen danach zugänglich zu machen. Dieses Archiv löst das Versprechen ein.",
+          "Klang ist eines der wichtigsten Medien, über die wir die Welt wahrnehmen, und wird in unserem Alltag doch oft völlig übersehen. Wenn wir an unsere Zukunft denken, überlegen wir meist, wie sie aussieht, aber nie, wie sie klingt.",
+          "Mit der Untersuchung „Sounding Futures“ haben wir diese Sichtweise infrage gestellt. Wir haben spekulativ eigene Zukunftsbilder entworfen und andere ermutigt, dasselbe zu tun: ihre Zukünfte in Form von Klang zu beobachten, sich vorzustellen und sich zu wünschen.",
+          "Als Studierende des Bachelorstudiums „Transformation Studies. Art x Science“ stehen wir seit unserem ersten Semester in Kontakt mit der Stadt Eisenerz. Wir haben uns mit der extraktivistischen Geschichte dieses Ortes und seines Eisenerzabbaus beschäftigt, ebenso mit der kleinen, aber lebendigen Gemeinschaft, die hier lebt. Daraus hat unsere Gruppe versucht, unser Denken in Klängen vor Ort anzuwenden: uns vorzustellen, wie verschiedene Szenarien der Stadtentwicklung den künftigen Klang des Ortes prägen könnten. Wäre er industrieller? Wäre er ruhiger? Wäre er geordnet oder chaotisch?",
           { futures: [
             ["stone", "Die leere Stadt"],
             ["metal", "Die KI-Zukunft"],
@@ -285,8 +280,7 @@ window.ESF_CONTENT = {
             ["Team", "Amelie Atsch, Lena Gramlinger, Sofía Gutiérrez Escobar, Diana Kho, Raphaela Leitner, Egor Safronov, Karin Reisinger"],
             ["Kurs", "Art x Science School for Transformation, Universität für angewandte Kunst Wien"],
             ["Festival", "Rostfest 2026, Eisenerz", "https://www.rostfest.at"],
-            ["Lektüre", "Karin Reisinger, „Two Mining Areas: Spaces of Care amid Extraction“, Architecture and Culture 11 (3–4), 2023", "https://doi.org/10.1080/20507828.2023.2219115"],
-            ["Zahlen", "Statistik Austria (Bevölkerung), VA Erzberg (Bergbau)"]
+            ["Lektüre", "Karin Reisinger, „Two Mining Areas: Spaces of Care amid Extraction“, Architecture and Culture 11 (3–4), 2023", "https://doi.org/10.1080/20507828.2023.2219115"]
           ] }
         ]
       }
