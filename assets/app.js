@@ -882,15 +882,19 @@
     w.scroll.setAttribute("aria-label", tr(page.title));
     const art = w.article;
     art.textContent = "";
-    art.append(h("h2", { class: "doc__title", id: `w-${w.id}-title` }, tr(page.title)));
-    for (const block of page.blocks[lang] || page.blocks.en) {
+    // A window without a translation shows its English text, marked as English.
+    const textLang = page.blocks[lang] ? lang : "en";
+    if (textLang !== lang) art.lang = textLang;
+    else art.removeAttribute("lang");
+    art.append(h("h2", { class: "doc__title", id: `w-${w.id}-title` }, page.title[textLang] ?? tr(page.title)));
+    for (const block of page.blocks[textLang]) {
       if (typeof block === "string") art.append(h("p", {}, block));
-      else if (block.futures) art.append(renderFutures(block.futures));
+      else if (block.futures) art.append(renderFutures(block.futures, textLang));
       else if (block.credits) art.append(renderCredits(block.credits));
     }
   }
 
-  function renderFutures(list) {
+  function renderFutures(list, textLang) {
     const ul = h("ul", { class: "doc__futures" });
     for (const [trackId, name] of list) {
       const t = C.tracks[trackId];
@@ -899,7 +903,7 @@
       swatch.style.background = t.palette[2];
       const button = h("button", { class: "doc__future", type: "button", "data-track": trackId },
         h("span", { class: "doc__future-name" }, name),
-        h("span", { class: "doc__future-world" }, swatch, tr(t.label)));
+        h("span", { class: "doc__future-world" }, swatch, t.label[textLang] ?? tr(t.label)));
       button.addEventListener("click", () => {
         audioContext();
         const icon = iconFor(trackId);

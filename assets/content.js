@@ -221,31 +221,22 @@ window.ESF_CONTENT = {
     }
   },
 
-  /* The two text windows. A block is either a paragraph (a string), a list of
-     futures that open their sound windows, or a credits list. */
+  /* The two text windows, in English only: German visitors see the English text.
+     Add a de version next to en to translate a window. A block is either a
+     paragraph (a string), a list of futures that open their sound windows,
+     or a credits list. */
   pages: {
     performance: {
-      title: { en: "The performance", de: "Die Performance" },
+      title: { en: "The performance" },
       blocks: {
         en: [
-          "Sounding Futures was performed at Rostfest 2026 on Saturday, 15 August, from 14:00 to 20:00, in a former café in the old town of Eisenerz.",
-          "A slow ambient foundation filled the room from the start. Over it, the team played live with instruments and electronics.",
-          "Visitors could change what the room sounded like. A camera watched a marked field on a table. When someone placed moss or a piece of iron ore in the field and held it still for a moment, the café crossfaded into the sound world of that material. The camera kept no images, and when it failed to recognise something, the change was made by hand.",
-          "The six sound worlds are not recordings. Software written for the project generates them from a handful of parameters and a fixed seed, 1975. Each world moves through a 64-second cycle from a calm state to a denser one and back again, so it can loop without end.",
-          "This archive keeps what the performance left behind: the six sound worlds, rendered on 30 September 2026, and eight pieces made for Eisenerz in August."
-        ],
-        de: [
-          "Sounding Futures war beim Rostfest 2026 am Samstag, dem 15. August, von 14 bis 20 Uhr in einem ehemaligen Café in der Altstadt von Eisenerz zu hören.",
-          "Von Beginn an füllte ein langsames Ambient-Fundament den Raum. Darüber spielte das Team live mit Instrumenten und Elektronik.",
-          "Die Besucher:innen konnten verändern, wie der Raum klang. Eine Kamera beobachtete ein markiertes Feld auf einem Tisch. Wer Moos oder ein Stück Eisenerz hineinlegte und einen Moment ruhig hielt, ließ das Café in die Klangwelt dieses Materials überblenden. Die Kamera speicherte keine Bilder, und wenn sie etwas nicht erkannte, wurde von Hand umgeschaltet.",
-          "Die sechs Klangwelten sind keine Aufnahmen. Eine eigens für das Projekt geschriebene Software erzeugt sie aus wenigen Parametern und einem festen Startwert, 1975. Jede Welt durchläuft einen Zyklus von 64 Sekunden, von einem ruhigen zu einem dichteren Zustand und wieder zurück, und kann so endlos weiterlaufen.",
-          "Dieses Archiv bewahrt, was von der Performance geblieben ist: die sechs Klangwelten, gerendert am 30. September 2026, und acht Stücke, die im August für Eisenerz entstanden sind."
+          "During the Rostfest of August 2026, we sounded out different manifestations of the town’s futures using a biosonification device to interact with moss and other flora, coded musical interpretations, as well as instruments recorded with looping pedals, reversed with added reverb and distortion. Each track tells a different story: from mellifluous melodies to static, textured notes. The participatory event invited the town community as collaborators and considers Eisenerz as far more than its prevalent history and reputation. A site of creativity and ground ready to flourish: sounding futures come alive – and are still alive! The archive can always be added to."
         ]
       }
     },
 
     background: {
-      title: { en: "The background", de: "Der Hintergrund" },
+      title: { en: "The background" },
       blocks: {
         en: [
           "Being one of the main mediums of our perception of the world, sound is often completely overlooked as a part of our daily lives. Thinking about our future, we usually think about what it looks like, but never how it sounds.",
@@ -263,24 +254,6 @@ window.ESF_CONTENT = {
             ["Course", "Art x Science School for Transformation, University of Applied Arts Vienna"],
             ["Festival", "Rostfest 2026, Eisenerz", "https://www.rostfest.at"],
             ["Reading", "Karin Reisinger, “Two Mining Areas: Spaces of Care amid Extraction”, Architecture and Culture 11 (3–4), 2023", "https://doi.org/10.1080/20507828.2023.2219115"]
-          ] }
-        ],
-        de: [
-          "Klang ist eines der wichtigsten Medien, über die wir die Welt wahrnehmen, und wird in unserem Alltag doch oft völlig übersehen. Wenn wir an unsere Zukunft denken, überlegen wir meist, wie sie aussieht, aber nie, wie sie klingt.",
-          "Mit der Untersuchung „Sounding Futures“ haben wir diese Sichtweise infrage gestellt. Wir haben spekulativ eigene Zukunftsbilder entworfen und andere ermutigt, dasselbe zu tun: ihre Zukünfte in Form von Klang zu beobachten, sich vorzustellen und sich zu wünschen.",
-          "Als Studierende des Bachelorstudiums „Transformation Studies. Art x Science“ stehen wir seit unserem ersten Semester in Kontakt mit der Stadt Eisenerz. Wir haben uns mit der extraktivistischen Geschichte dieses Ortes und seines Eisenerzabbaus beschäftigt, ebenso mit der kleinen, aber lebendigen Gemeinschaft, die hier lebt. Daraus hat unsere Gruppe versucht, unser Denken in Klängen vor Ort anzuwenden: uns vorzustellen, wie verschiedene Szenarien der Stadtentwicklung den künftigen Klang des Ortes prägen könnten. Wäre er industrieller? Wäre er ruhiger? Wäre er geordnet oder chaotisch?",
-          { futures: [
-            ["stone", "Die leere Stadt"],
-            ["metal", "Die KI-Zukunft"],
-            ["moss", "Die Rückkehr zur Natur"],
-            ["iron-stone", "Die industrielle Übernahme"],
-            ["threads", "Gemeinschaftliche Entwicklung"]
-          ] },
-          { credits: [
-            ["Team", "Amelie Atsch, Lena Gramlinger, Sofía Gutiérrez Escobar, Diana Kho, Raphaela Leitner, Egor Safronov, Karin Reisinger"],
-            ["Kurs", "Art x Science School for Transformation, Universität für angewandte Kunst Wien"],
-            ["Festival", "Rostfest 2026, Eisenerz", "https://www.rostfest.at"],
-            ["Lektüre", "Karin Reisinger, „Two Mining Areas: Spaces of Care amid Extraction“, Architecture and Culture 11 (3–4), 2023", "https://doi.org/10.1080/20507828.2023.2219115"]
           ] }
         ]
       }
