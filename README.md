@@ -37,6 +37,12 @@ The site is published with GitHub Pages from the `main` branch of this repositor
 git add -A && git commit -m "Update texts" && git push
 ```
 
+If a push with new audio fails with "HTTP 400", git's upload buffer is too small for the MP3s. Push once with a bigger buffer:
+
+```bash
+git -c http.postBuffer=524288000 push
+```
+
 It also runs on any other static host, such as Netlify or a university web server: upload `index.html`, `assets/` and `audio/`.
 
 ## Notes on the audio
