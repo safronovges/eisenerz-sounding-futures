@@ -11,6 +11,7 @@ window.ESF_CONTENT = {
     en: {
       performance: "the performance",
       background: "the background",
+      impressum: "impressum",
       note: "Rostfest 2026 · Eisenerz",
       language: "Language",
       sounds: "Sounds",
@@ -26,6 +27,7 @@ window.ESF_CONTENT = {
     de: {
       performance: "die performance",
       background: "der hintergrund",
+      impressum: "impressum",
       note: "Rostfest 2026 · Eisenerz",
       language: "Sprache",
       sounds: "Klänge",
@@ -214,10 +216,10 @@ window.ESF_CONTENT = {
     }
   },
 
-  /* The two text windows, in English only: German visitors see the English text.
-     Add a de version next to en to translate a window. A block is either a
-     paragraph (a string), a list of futures that open their sound windows,
-     or a credits list. */
+  /* The text windows. "the performance" and "the background" are in English
+     only: German visitors see the English text. Add a de version next to en to
+     translate a window. A block is either a paragraph (a string), a list of
+     futures that open their sound windows, or a credits list. */
   pages: {
     performance: {
       title: { en: "The performance" },
@@ -240,6 +242,27 @@ window.ESF_CONTENT = {
             ["Course", "Art x Science School for Transformation, University of Applied Arts Vienna"],
             ["Festival", "Rostfest 2026, Eisenerz", "https://www.rostfest.at"],
             ["Starting point", "Karin Reisinger, “Two Mining Areas: Spaces of Care amid Extraction”, Architecture and Culture 11 (3–4), 2023", "https://doi.org/10.1080/20507828.2023.2219115"]
+          ] }
+        ]
+      }
+    },
+
+    /* The legal notice Austrian law asks of every website (§ 25 MedienG). */
+    impressum: {
+      title: { en: "Impressum", de: "Impressum" },
+      blocks: {
+        en: [
+          "Disclosure under § 25 of the Austrian Media Act (MedienG).",
+          { credits: [
+            ["Media owner", "Egor Safronov, Vienna, Austria"],
+            ["Website", "Archive of Sounding Futures, a student project of the Art x Science School for Transformation, University of Applied Arts Vienna"]
+          ] }
+        ],
+        de: [
+          "Offenlegung gemäß § 25 Mediengesetz.",
+          { credits: [
+            ["Medieninhaber", "Egor Safronov, Wien, Österreich"],
+            ["Website", "Archiv von Sounding Futures, einem Studierendenprojekt der Art x Science School for Transformation, Universität für angewandte Kunst Wien"]
           ] }
         ]
       }

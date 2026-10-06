@@ -420,6 +420,35 @@ button {
   margin: 0;
 }
 
+.foot__end {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.foot__link {
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 4px 0;
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: var(--t-micro);
+  letter-spacing: .02em;
+  color: var(--ink-soft);
+  transition: color .3s var(--ease);
+}
+
+.foot__link:hover,
+.foot__link[aria-expanded="true"] {
+  color: var(--ink);
+}
+
+.foot__link[aria-expanded="true"] {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .lang {
   display: flex;
   gap: 2px;

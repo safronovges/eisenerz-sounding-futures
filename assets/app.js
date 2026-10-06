@@ -438,7 +438,7 @@
   let zTop = 20;
 
   const iconFor = (id) => document.getElementById("icon-" + id);
-  const pageButton = (id) => document.querySelector(`.bar__link[data-page="${id}"]`);
+  const pageButton = (id) => document.querySelector(`button[data-page="${id}"]`);
 
   function topWindow(kind) {
     let best = null;
@@ -523,6 +523,10 @@
     } else if (w.id === "background") {
       x = vw - r.width - 24;
       y = 58;
+    } else if (w.id === "impressum") {
+      // Above its link in the footer.
+      x = vw - r.width - 24;
+      y = vh - r.height - 52;
     } else {
       // Sound windows open over the light in the middle, so the files stay reachable.
       const others = [...wins.values()].filter((o) => o.kind === "sound" && o !== w).length;
@@ -1152,7 +1156,7 @@
 
   function applyLanguage() {
     root.lang = lang;
-    for (const button of document.querySelectorAll(".bar__link")) button.textContent = ui(button.dataset.page);
+    for (const button of document.querySelectorAll("button[data-page]")) button.textContent = ui(button.dataset.page);
     document.getElementById("files").setAttribute("aria-label", ui("sounds"));
     for (const id of Object.keys(C.tracks)) {
       const icon = iconFor(id);
@@ -1197,7 +1201,7 @@
       });
     });
 
-    for (const button of document.querySelectorAll(".bar__link")) {
+    for (const button of document.querySelectorAll("button[data-page]")) {
       button.addEventListener("click", () => {
         const id = button.dataset.page;
         const w = wins.get(id);
