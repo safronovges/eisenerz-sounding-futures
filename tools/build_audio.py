@@ -52,9 +52,9 @@ MP3_QUALITY = "2"     # LAME VBR quality, about 190 kbps
 
 # id, source file relative to SOURCE_DIR, loop
 SOURCES = [
-    ("present", "sound-worlds/01-present-neutral.wav", True),
+    ("present", "with-rhythm/01-present-neutral.wav", True),
     ("moss", "sound-worlds/02-moss-green-return.wav", True),
-    ("stone", "sound-worlds/03-stone-empty-city.wav", True),
+    ("stone", "with-rhythm/03-stone-empty-city.wav", True),
     ("iron-stone", "sound-worlds/04-iron-stone-industrial-development.wav", True),
     ("metal", "sound-worlds/05-metal-ai-future.wav", True),
     ("threads", "sound-worlds/06-threads-community-development.wav", True),

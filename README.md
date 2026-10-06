@@ -58,5 +58,6 @@ It also runs on any other static host, such as Netlify or a university web serve
 ## Notes on the audio
 
 - All tracks are gain-matched to about −18 LUFS with plain gain: no compression or limiting. The sources had ranged from −27 to −4 LUFS. The original WAVs in `Summer School/rendered-audio-2026-09-30` are untouched.
+- Present and Stone use the versions with percussion from `with-rhythm/` (Stone: kick only). The other four sound worlds use the versions without it from `sound-worlds/`.
 - The sound worlds are encoded with one second of circular padding on each side. The player loops the middle 64 seconds, so the loop stays seamless whatever encoder delay a browser's decoder leaves in.
 - Only one sound plays at a time. Starting another one crossfades, much like the installation did in the café.
