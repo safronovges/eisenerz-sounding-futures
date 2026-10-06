@@ -19,14 +19,14 @@ Then open http://localhost:8173. This server tells the browser to recheck files 
 Every text lives in `assets/content.js`, in English (`en`) and German (`de`):
 
 - the two text windows, "the performance" and "the background", including the credits
-- each sound's label, title, subtitle, description (`text`) and the small technical line. A `draft` is a suggested description that is not shown; rename it to `text` to use it.
+- each sound's label, title, subtitle, description (`text`), author (`credit`, shown under the description) and the small technical line. A `draft` is a suggested description that is not shown; rename it to `text` to use it.
 - the order of the files on the page (`files`)
 - each sound's colours (`palette`, darkest to lightest), used for its window and for its file's waveform while it plays
 
 ## Add or replace a sound
 
 1. Add the source WAV to `SOURCES` in `tools/build_audio.py`. Set `loop` to `True` only for files built as seamless loops.
-2. Run `python3 tools/build_audio.py` (needs ffmpeg and numpy). It writes `audio/<id>.mp3` and the waveform data in `assets/audio-data.js`.
+2. Run `python3 tools/build_audio.py <id>` (needs ffmpeg and numpy). It writes `audio/<id>.mp3` and adds its waveform data to `assets/audio-data.js`. Without an id it rebuilds every track.
 3. Add an entry with the same id to `tracks` in `assets/content.js` and add the id to `files`.
 
 ## Put it online

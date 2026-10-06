@@ -3,6 +3,7 @@
    text: the description shown in a sound's window. Without a German (de)
    version, German visitors see the English one.
    draft: a suggested description that is not shown; rename it to text to use it.
+   credit: an author's name, shown as a signature under the description.
    palette: four colours from darkest to lightest, used for the window
    background and for the file's waveform while it plays. */
 
@@ -44,7 +45,7 @@ window.ESF_CONTENT = {
   files: [
     "present", "moss", "stone", "iron-stone", "metal", "threads",
     "distortion-morse", "synth-1", "synth-2", "synth-3", "synth-4",
-    "synth-guitar", "violin-looped", "whale-guitar-train"
+    "synth-guitar", "violin-looped", "whale-guitar-train", "eisenzukkkkmosserzz"
   ],
 
   tracks: {
@@ -206,6 +207,17 @@ window.ESF_CONTENT = {
       },
       meta: { en: "44.1 kHz · 24 bit · stereo", de: "44,1 kHz · 24 Bit · Stereo" },
       palette: ["#07131e", "#1b4562", "#6a9cc0", "#d3e6f2"]
+    },
+    "eisenzukkkkmosserzz": {
+      label: { en: "eisenzukkkkmosserzz", de: "eisenzukkkkmosserzz" },
+      title: { en: "Eisenzukkkkmosserzz", de: "Eisenzukkkkmosserzz" },
+      eyebrow: { en: "eisenerz · 2026", de: "Eisenerz · 2026" },
+      text: {
+        en: "The ghosts of remembrance, digitalised, time memories stretched. The forgotten river flows, safeguarded by the chimerical moss chants. Pasado, Present and Zukunft, intertwined, drrrrrrrrrr. Never ending mountainous funeral."
+      },
+      credit: "Sofia Gutierrez (FIA)",
+      meta: { en: "44.1 kHz · 16 bit · stereo", de: "44,1 kHz · 16 Bit · Stereo" },
+      palette: ["#10140f", "#3c4f3a", "#a7c49a", "#efe9f6"]
     }
   },
 

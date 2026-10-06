@@ -253,7 +253,7 @@ button {
   margin-left: -14px;
 }
 
-/* one grid from the top left: two rows of seven on a wide screen */
+/* one grid from the top left: two rows (eight, then seven) on a wide screen */
 .files {
   list-style: none;
   margin: 0;
@@ -261,7 +261,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 6px 0;
-  max-width: calc(7 * 84px);
+  max-width: calc(8 * 84px);
 }
 
 .icon {
@@ -372,6 +372,9 @@ button {
 
 .icon__label span {
   display: inline-block;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
   padding: 1px 5px;
   border-radius: 4px;
   transition: background-color .3s var(--ease);
@@ -696,12 +699,18 @@ button {
   line-height: 1.04;
   letter-spacing: -.01em;
   text-wrap: balance;
+  overflow-wrap: anywhere;
 }
 
 .win__subtitle {
   margin: 0;
   font-size: var(--t-ui);
   opacity: .8;
+}
+
+.win__words {
+  display: grid;
+  gap: 8px;
 }
 
 .win__text {
@@ -711,6 +720,14 @@ button {
   opacity: .9;
   white-space: pre-line;
   text-wrap: pretty;
+}
+
+.win__credit {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: var(--t-micro);
+  letter-spacing: .02em;
+  opacity: .66;
 }
 
 /* player */

@@ -15,7 +15,8 @@ loop stays seamless whatever encoder delay a browser's MP3 decoder leaves in.
 
 The original WAV files are only read, never changed.
 
-Usage:  python3 tools/build_audio.py
+Usage:  python3 tools/build_audio.py              rebuild every track
+        python3 tools/build_audio.py <id> ...     rebuild only these tracks
 Needs:  ffmpeg (with libmp3lame) and numpy.
 Set ESF_SOURCE_DIR to point at another copy of "rendered-audio-2026-09-30".
 """
@@ -65,6 +66,7 @@ SOURCES = [
     ("synth-guitar", "Eisenerz/synth guitar eisenerz.wav", False),
     ("violin-looped", "Eisenerz/violin looped eisenerz.wav", False),
     ("whale-guitar-train", "Eisenerz/whale guitar train eisenerz.wav", False),
+    ("eisenzukkkkmosserzz", "Eisenerz/eisenzukkkkmosserzz.wav", False),
 ]
 
 ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_"
@@ -137,11 +139,28 @@ def peaks(samples):
     return pack(values)
 
 
+def load_existing():
+    """Entries already in audio-data.js, kept when only some tracks are rebuilt."""
+    if not DATA_FILE.exists():
+        return {}
+    text = DATA_FILE.read_text(encoding="utf-8")
+    return json.loads(text.split("window.ESF_AUDIO =", 1)[1].strip().rstrip(";"))
+
+
 def main():
+    only = set(sys.argv[1:])
+    unknown = only - {track_id for track_id, _, _ in SOURCES}
+    if unknown:
+        sys.exit("unknown track id: " + ", ".join(sorted(unknown)))
     AUDIO_DIR.mkdir(exist_ok=True)
+    existing = load_existing() if only else {}
     data = {}
     print(f"{'track':<20} {'source':>13} {'gain':>8} {'result':>13}   file")
     for track_id, rel, loop in SOURCES:
+        if only and track_id not in only:
+            if track_id in existing:
+                data[track_id] = existing[track_id]
+            continue
         src = SOURCE_DIR / rel
         if not src.exists():
             sys.exit(f"missing source: {src}")

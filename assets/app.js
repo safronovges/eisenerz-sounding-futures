@@ -677,6 +677,8 @@
     w.title = h("h2", { class: "win__title", id: `w-${id}-title` });
     w.subtitle = h("p", { class: "win__subtitle" });
     w.text = h("p", { class: "win__text" });
+    w.credit = h("p", { class: "win__credit" });
+    w.words = h("div", { class: "win__words" }, w.text, w.credit);
     w.toggle = h("button", { class: "player__toggle", type: "button" }, playIcon());
     w.wave = h("div", {
       class: "player__wave",
@@ -693,7 +695,7 @@
 
     el.append(art, w.bar, h("div", { class: "win__body" },
       h("div", { class: "win__head" }, w.eyebrow, w.title, w.subtitle),
-      w.text,
+      w.words,
       h("div", { class: "player" }, w.toggle, w.wave,
         h("p", { class: "player__time" }, w.timeNow, " / ", fmt(audio.duration))),
       w.error,
@@ -723,6 +725,9 @@
     w.barTitle.textContent = tr(t.label);
     w.eyebrow.textContent = tr(t.eyebrow);
     w.title.textContent = tr(t.title);
+    // A title that is one long word (a file name) gets smaller instead of breaking.
+    const longest = Math.max(...tr(t.title).split(/\s+/).map((word) => word.length));
+    w.title.style.fontSize = longest > 16 ? `${Math.max(18, Math.floor(300 / (longest * 0.67)))}px` : "";
     w.subtitle.textContent = tr(t.subtitle);
     w.subtitle.hidden = !tr(t.subtitle);
     // A description shows wherever one exists; without German, the English original is used.
@@ -730,6 +735,9 @@
     w.text.hidden = !w.text.textContent;
     if (w.text.textContent && lang !== "en" && !(t.text && t.text[lang])) w.text.lang = "en";
     else w.text.removeAttribute("lang");
+    w.credit.textContent = tr(t.credit);
+    w.credit.hidden = !w.credit.textContent;
+    w.words.hidden = w.text.hidden && w.credit.hidden;
     w.meta.textContent = tr(t.meta);
     w.loopButton.textContent = ui("loop");
     w.wave.setAttribute("aria-label", ui("position"));
