@@ -2,7 +2,6 @@
    Edit freely. Each sound's id must match an entry in audio-data.js.
    text: the description shown in a sound's window. Without a German (de)
    version, German visitors see the English one.
-   draft: a suggested description that is not shown; rename it to text to use it.
    credit: an author's name, shown as a signature under the description.
    palette: four colours from darkest to lightest, used for the window
    background and for the file's waveform while it plays. */
@@ -54,9 +53,8 @@ window.ESF_CONTENT = {
       title: { en: "Present", de: "Gegenwart" },
       subtitle: { en: "Neutral", de: "Neutral" },
       eyebrow: { en: "sound world 01", de: "Klangwelt 01" },
-      draft: {
-        en: "The present, held neutral. A calm, light ambience of bowed, violin-like tones, with slow movement and a trace of air and rosin. The five futures branch off from here.",
-        de: "Die Gegenwart, neutral gehalten. Eine ruhige, helle Fläche aus gestrichenen, geigenähnlichen Tönen, mit langsamer Bewegung und einem Hauch von Luft und Kolophonium. Von hier zweigen die fünf Zukünfte ab."
+      text: {
+        en: "Simple, stable. All the elements are combined into one sound: empty streets, people eventually having discussions, the disruptive sounds from the mine. A little bit of everything."
       },
       meta: { en: "196 Hz · 64 s cycle · seed 1975", de: "196 Hz · Zyklus 64 s · Seed 1975" },
       palette: ["#26201b", "#6f6558", "#bdb2a2", "#f1ece3"],
@@ -67,9 +65,8 @@ window.ESF_CONTENT = {
       title: { en: "Moss", de: "Moos" },
       subtitle: { en: "The return to nature", de: "Die Rückkehr zur Natur" },
       eyebrow: { en: "sound world 02", de: "Klangwelt 02" },
-      draft: {
-        en: "People look for new ways to live in tune with nature. A slow sine-wave chord with soft upper partials and a faint pulse. Over the cycle it grows brighter, more textured and more strongly pulsed.",
-        de: "Die Menschen suchen nach neuen Wegen, im Einklang mit der Natur zu leben. Ein langsamer Sinus-Akkord mit weichen Obertönen und einem leisen Puls. Im Lauf des Zyklus wird er heller, dichter und deutlicher pulsierend."
+      text: {
+        en: "Green, stable, warm. The nature is not silent. Its music is calming and comforting — opposite to being disruptive."
       },
       meta: { en: "165 Hz · 64 s cycle · seed 1975", de: "165 Hz · Zyklus 64 s · Seed 1975" },
       palette: ["#0f2117", "#2f5a35", "#8fb26a", "#e1ebc8"],
@@ -80,9 +77,8 @@ window.ESF_CONTENT = {
       title: { en: "Stone", de: "Stein" },
       subtitle: { en: "The empty city", de: "Die leere Stadt" },
       eyebrow: { en: "sound world 03", de: "Klangwelt 03" },
-      draft: {
-        en: "More and more people move to the big cities, and smaller towns are slowly left behind. Hollow stone resonance, wind, distant footsteps and long echoes through empty streets.",
-        de: "Immer mehr Menschen ziehen in die Großstädte, kleinere Orte werden nach und nach verlassen. Hohle Steinresonanz, Wind, ferne Schritte und lange Echos in leeren Straßen."
+      text: {
+        en: "Empty city. Grey. Sounds of wind, nature going through the empty city blend with echoes into a deep monotone sound."
       },
       meta: { en: "72 Hz · 64 s cycle · seed 1975", de: "72 Hz · Zyklus 64 s · Seed 1975" },
       palette: ["#1a1e22", "#4d5963", "#a9b4bc", "#e8ecee"],
@@ -93,9 +89,8 @@ window.ESF_CONTENT = {
       title: { en: "Iron stone", de: "Eisenstein" },
       subtitle: { en: "The industrial takeover", de: "Die industrielle Übernahme" },
       eyebrow: { en: "sound world 04", de: "Klangwelt 04" },
-      draft: {
-        en: "As the iron mine keeps expanding, people leave their homes and industry pushes out the life that was there. Underground rumble, moving air and metallic impacts, joined by cavern reflections as the cycle develops.",
-        de: "Während sich das Eisenbergwerk immer weiter ausdehnt, verlassen die Menschen ihre Heimat, und die Industrie verdrängt das bisherige Leben. Unterirdisches Grollen, bewegte Luft und metallische Schläge, zu denen im Lauf des Zyklus der Hall einer Kaverne kommt."
+      text: {
+        en: "The mining narrative takes over the life. The mine itself takes over the city. The sound is an interpreted echo from the ore sourcing: alien, surreal, disruptive."
       },
       meta: { en: "rumble 0.68 · metal 0.65 · 64 s cycle", de: "Grollen 0,68 · Metall 0,65 · Zyklus 64 s" },
       palette: ["#220e07", "#6e2a12", "#c45f30", "#f2b48b"],
@@ -106,9 +101,8 @@ window.ESF_CONTENT = {
       title: { en: "Metal", de: "Metall" },
       subtitle: { en: "The AI future", de: "Die KI-Zukunft" },
       eyebrow: { en: "sound world 05", de: "Klangwelt 05" },
-      draft: {
-        en: "Artificial intelligence reaches the countryside, and digital technology becomes part of everyday life. A 165 Hz tone, frequency-modulated and cut by an exact 4 Hz gate, steps through an E–G–B arpeggio over a calm, breathing field. Its glitches follow a fixed score, 20260814.",
-        de: "Künstliche Intelligenz erreicht auch den ländlichen Raum, digitale Technologien werden Teil des Alltags. Ein 165-Hz-Ton, frequenzmoduliert und von einem exakten 4-Hz-Gate zerschnitten, schreitet über einer ruhig atmenden Fläche ein E-G-H-Arpeggio ab. Seine Störungen folgen einer festen Partitur, 20260814."
+      text: {
+        en: "The extreme exaggerated speculation for AI-led future. The most disruptive and the least native to humans."
       },
       meta: { en: "165 Hz · 4 Hz gate · 64 s cycle", de: "165 Hz · Gate 4 Hz · Zyklus 64 s" },
       palette: ["#121320", "#3d4060", "#9ea2c8", "#e6e6f4"],
@@ -119,9 +113,8 @@ window.ESF_CONTENT = {
       title: { en: "Threads", de: "Fäden" },
       subtitle: { en: "Community development", de: "Gemeinschaftliche Entwicklung" },
       eyebrow: { en: "sound world 06", de: "Klangwelt 06" },
-      draft: {
-        en: "People join forces, share what they know and shape their future together. Warm threads of sound weave around a shared pitch and a shared pulse and gather into a wider common field.",
-        de: "Die Menschen schließen sich zusammen, teilen ihr Wissen und gestalten gemeinsam ihre Zukunft. Warme Klangfäden verweben sich um eine gemeinsame Tonhöhe und einen gemeinsamen Puls und sammeln sich zu einem weiten, gemeinsamen Feld."
+      text: {
+        en: "The sound that felt the most fitting on the Rostfest. The community takes over. People are being people: playing music, eating out, kids are playing outside. The perfect balance between nature and technology is achieved."
       },
       meta: { en: "132 Hz · 64 s cycle · seed 1975", de: "132 Hz · Zyklus 64 s · Seed 1975" },
       palette: ["#26121a", "#7a3d4f", "#d38f98", "#f6d9d2"],

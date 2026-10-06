@@ -19,7 +19,7 @@ Then open http://localhost:8173. This server tells the browser to recheck files 
 Every text lives in `assets/content.js`, in English (`en`) and German (`de`):
 
 - the two text windows, "the performance" and "the background", including the credits
-- each sound's label, title, subtitle, description (`text`), author (`credit`, shown under the description) and the small technical line. A `draft` is a suggested description that is not shown; rename it to `text` to use it.
+- each sound's label, title, subtitle, description (`text`), author (`credit`, shown under the description) and the small technical line.
 - the order of the files on the page (`files`)
 - each sound's colours (`palette`, darkest to lightest), used for its window and for its file's waveform while it plays
 
