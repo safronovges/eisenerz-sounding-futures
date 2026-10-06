@@ -236,10 +236,10 @@ window.ESF_CONTENT = {
           "During the “Sounding Futures” investigation, we challenged that perspective, speculating our own future envisioning and encouraging others to do the same: observe, imagine and wish for their futures in the form of sound.",
           "As students from the Bachelor’s program “Transformation Studies. Art x Science”, we have been in touch with the town of Eisenerz ever since our first semester. As we have pondered the extractivist history of this place and its iron ore mining site, as well as the small yet lively community inhabiting it, our group has made an effort to apply our framework of thinking sounds on the field: imagine how different scenarios of the town development could affect its future sound. Would it be more industrial? Would it be calmer? Would it be structured or chaotic?",
           { credits: [
-            ["Team", "Amelie Atsch, Lena Gramlinger, Sofía Gutiérrez Escobar, Diana Kho, Raphaela Leitner, Egor Safronov, Karin Reisinger"],
+            ["Team", "Amelie Atsch, Sofía Gutiérrez Escobar, Egor Safronov, Karin Reisinger"],
             ["Course", "Art x Science School for Transformation, University of Applied Arts Vienna"],
             ["Festival", "Rostfest 2026, Eisenerz", "https://www.rostfest.at"],
-            ["Reading", "Karin Reisinger, “Two Mining Areas: Spaces of Care amid Extraction”, Architecture and Culture 11 (3–4), 2023", "https://doi.org/10.1080/20507828.2023.2219115"]
+            ["Starting point", "Karin Reisinger, “Two Mining Areas: Spaces of Care amid Extraction”, Architecture and Culture 11 (3–4), 2023", "https://doi.org/10.1080/20507828.2023.2219115"]
           ] }
         ]
       }
